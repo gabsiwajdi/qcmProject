@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/shared/shared.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1700142895046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700148273041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     CommonModule,\r\n     HttpClientModule,\r\n     RouterModule,\r\n     BrowserModule,\r\n-    ReactiveFormsModule\r\n+    ReactiveFormsModule,\r\n   ],\r\n   exports:[\r\n     HttpClientModule,\r\n     BrowserModule,\r\n"
+                },
+                {
+                    "date": 1700148295390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,17 @@\n import { HttpClientModule } from '@angular/common/http';\r\n import { BrowserModule } from '@angular/platform-browser';\r\n import { RouterModule } from '@angular/router';\r\n import { ReactiveFormsModule } from '@angular/forms';\r\n+import { ToastrModule } from 'ngx-toastr';\r\n \r\n @NgModule({\r\n   declarations: [NavbarComponent],\r\n   imports: [\r\n     MatrialModule,\r\n     CommonModule,\r\n     HttpClientModule,\r\n+    ToastrModule.forRoot(),\r\n     RouterModule,\r\n     BrowserModule,\r\n     ReactiveFormsModule,\r\n   ],\r\n"
+                },
+                {
+                    "date": 1700148707889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n import { HttpClientModule } from '@angular/common/http';\r\n import { BrowserModule } from '@angular/platform-browser';\r\n import { RouterModule } from '@angular/router';\r\n import { ReactiveFormsModule } from '@angular/forms';\r\n-import { ToastrModule } from 'ngx-toastr';\r\n \r\n @NgModule({\r\n   declarations: [NavbarComponent],\r\n   imports: [\r\n"
+                }
+            ],
+            "date": 1700142895046,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NavbarComponent } from './components/navbar/navbar.component';\r\nimport { MatrialModule } from './matrial.module';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { RouterModule } from '@angular/router';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    NavbarComponent\r\n  ],\r\n  imports: [\r\n    MatrialModule,\r\n    CommonModule,\r\n    HttpClientModule,\r\n    RouterModule,\r\n    BrowserModule,\r\n    ReactiveFormsModule\r\n  ],\r\n  exports:[\r\n    HttpClientModule,\r\n    BrowserModule,\r\n    RouterModule,\r\n    MatrialModule,\r\n    CommonModule,\r\n    NavbarComponent,\r\n    ReactiveFormsModule\r\n  ]\r\n})\r\nexport class SharedModule { }\r\n"
+        }
+    ]
+}

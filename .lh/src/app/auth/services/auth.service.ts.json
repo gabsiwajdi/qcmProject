@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/auth/services/auth.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1700142375707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700143993783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,10 @@\n })\n export class AuthService {\n \n   constructor(private http:HttpClient) { }\n+\n+\n+  createUser(){\n+    \n+  }\n }\n"
+                },
+                {
+                    "date": 1700144015509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,8 @@\n })\n export class AuthService {\n   constructor(private http: HttpClient) {}\n \n-  createUser() {}\n+  createUser() {\n+    return this.http.post(\"\")\n+  }\n }\n"
+                },
+                {
+                    "date": 1700144101221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n export class AuthService {\n   constructor(private http: HttpClient) {}\n \n   createUser() {\n-    return this.http.post('');\n+    return this.http.post('http/');\n   }\n }\n"
+                }
+            ],
+            "date": 1700142375707,
+            "name": "Commit-0",
+            "content": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthService {\n\n  constructor(private http:HttpClient) { }\n}\n"
+        }
+    ]
+}

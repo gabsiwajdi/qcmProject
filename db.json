@@ -1,0 +1,47 @@
+{
+  "students": [
+    {
+      "userName": "test",
+      "email": "test@test.com",
+      "password": "123",
+      "confirmPassWord": "123",
+      "id": 1
+    },
+    {
+      "userName": "wajdi",
+      "email": "gabsiwajdi2014@gmail.com",
+      "password": "789",
+      "confirmPassWord": "789",
+      "id": 2
+    },
+    {
+      "userName": "gabsi",
+      "email": "gabsi@gmail.com",
+      "password": "7894",
+      "confirmPassWord": "7894",
+      "id": 3
+    },
+    {
+      "userName": "salah",
+      "email": "salah@tyu.ri",
+      "password": "aaaa",
+      "confirmPassWord": "aaaa",
+      "id": 4
+    },
+    {
+      "userName": "azeert",
+      "email": "azertt@oiuuy.cv",
+      "password": "852",
+      "confirmPassWord": "852",
+      "id": 5
+    }
+  ],
+  "doctor": [{
+    "userName": "admin",
+    "email": "admin@admin.com",
+    "password": "admin123",
+    "confirmPassWord": "admin123",
+    "id": 1
+  }],
+  "login": []
+}
