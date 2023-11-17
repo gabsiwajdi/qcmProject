@@ -66,7 +66,7 @@ export class RegisterComponent implements OnInit {
   }
 
   getAllStudents() {
-    this.service.getAllStudents().subscribe((res: any) => {
+    this.service.getAllStudents('students').subscribe((res: any) => {
       this.students = res;
       console.log(this.students);
     });
