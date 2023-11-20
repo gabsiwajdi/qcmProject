@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1700141281522,
@@ -28,6 +28,54 @@
                 {
                     "date": 1700150298543,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+{\n+  \"students\": [\n+    {\n+      \"userName\": \"test\",\n+      \"email\": \"test@test.com\",\n+      \"password\": \"123\",\n+      \"confirmPassWord\": \"123\",\n+      \"id\": 1\n+    },\n+    {\n+      \"userName\": \"wajdi\",\n+      \"email\": \"gabsiwajdi2014@gmail.com\",\n+      \"password\": \"789\",\n+      \"confirmPassWord\": \"789\",\n+      \"id\": 2\n+    },\n+    {\n+      \"userName\": \"gabsi\",\n+      \"email\": \"gabsi@gmail.com\",\n+      \"password\": \"7894\",\n+      \"confirmPassWord\": \"7894\",\n+      \"id\": 3\n+    },\n+    {\n+      \"userName\": \"salah\",\n+      \"email\": \"salah@tyu.ri\",\n+      \"password\": \"aaaa\",\n+      \"confirmPassWord\": \"aaaa\",\n+      \"id\": 4\n+    },\n+    {\n+      \"userName\": \"azeert\",\n+      \"email\": \"azertt@oiuuy.cv\",\n+      \"password\": \"852\",\n+      \"confirmPassWord\": \"852\",\n+      \"id\": 5\n+    }\n+  ],\n+  \"doctor\": [{\n+    \"userName\": \"admin\",\n+    \"email\": \"admin@admin.com\",\n+    \"password\": \"admin123\",\n+    \"confirmPassWord\": \"admin123\",\n+    \"id\": 1\n+  }],\n+  \"login\": []\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700479167623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,73 +5,22 @@\n       \"email\": \"test@test.com\",\n       \"password\": \"123\",\n       \"confirmPassWord\": \"123\",\n       \"id\": 1\n-    },\n+    }\n+  ],\n+  \"doctor\": [\n     {\n-      \"userName\": \"wajdi\",\n-      \"email\": \"gabsiwajdi2014@gmail.com\",\n-      \"password\": \"789\",\n-      \"confirmPassWord\": \"789\",\n-      \"id\": 2\n-    },\n+      \"userName\": \"admin\",\n+      \"email\": \"admin@admin.com\",\n+      \"password\": \"admin123\",\n+      \"confirmPassWord\": \"admin123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"login\": [\n     {\n-      \"userName\": \"gabsi\",\n-      \"email\": \"gabsi@gmail.com\",\n-      \"password\": \"7894\",\n-      \"confirmPassWord\": \"7894\",\n-      \"id\": 3\n-    },\n-    {\n-      \"userName\": \"salah\",\n-      \"email\": \"salah@tyu.ri\",\n-      \"password\": \"aaaa\",\n-      \"confirmPassWord\": \"aaaa\",\n-      \"id\": 4\n-    },\n-    {\n-      \"userName\": \"azeert\",\n-      \"email\": \"azertt@oiuuy.cv\",\n-      \"password\": \"852\",\n-      \"confirmPassWord\": \"852\",\n-      \"id\": 5\n+      \n+      \"id\": 1\n     }\n-  ],\n-  \"doctor\": [{\n-    \"userName\": \"admin\",\n-    \"email\": \"admin@admin.com\",\n-    \"password\": \"admin123\",\n-    \"confirmPassWord\": \"admin123\",\n-    \"id\": 1\n-  }],\n-  \"login\": []\n-}\n-{\r\n-    \"students\":[\r\n-        \r\n-    ],\r\n-\r\n-    \"doctor\":[],\r\n-\r\n-    \"login\":[]\r\n-}\n-{\r\n-    \"students\":[\r\n-        \r\n-    ],\r\n-\r\n-    \"doctors\":[],\r\n-\r\n-    \"login\":[]\r\n-}\n-{\r\n-    \"users\":[\r\n-        {\r\n-            \"name\":\"wajdi\",\r\n-            \"age\":29,\r\n-            \"email\":\"gabsiwajdi2014@gmail.com\",\r\n-            \"tel\":52819726\r\n-\r\n-\r\n-        }\r\n-    ]\r\n+  ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480110563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,13 @@\n     }\n   ],\n   \"login\": [\n     {\n-      \n+      \"userName\": \"admin\",\n+      \"role\": \"doctor\",\n       \"id\": 1\n     }\n-  ]\n+  ],\n+  \"subjects\":[{\n+    \n+  }]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480159002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       \"id\": 1\n     }\n   ],\n   \"subjects\":[{\n-    \n+    question\n   }]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480171677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,8 @@\n       \"id\": 1\n     }\n   ],\n   \"subjects\":[{\n-    question\n+    \"questions\":[],\n+    \n   }]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480181641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,7 +25,8 @@\n     }\n   ],\n   \"subjects\":[{\n     \"questions\":[],\n+    \"name\":\"\",\n     \n   }]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480199893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+{\n+  \"students\": [\n+    {\n+      \"userName\": \"test\",\n+      \"email\": \"test@test.com\",\n+      \"password\": \"123\",\n+      \"confirmPassWord\": \"123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"doctor\": [\n+    {\n+      \"userName\": \"admin\",\n+      \"email\": \"admin@admin.com\",\n+      \"password\": \"admin123\",\n+      \"confirmPassWord\": \"admin123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"login\": [\n+    {\n+      \"userName\": \"admin\",\n+      \"role\": \"doctor\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"subjects\":[{\n+    \"questions\":[],\n+    \"name\":\"\"\n+\n+  }]\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480241829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+{\n+  \"students\": [\n+    {\n+      \"userName\": \"test\",\n+      \"email\": \"test@test.com\",\n+      \"password\": \"123\",\n+      \"confirmPassWord\": \"123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"doctor\": [\n+    {\n+      \"userName\": \"admin\",\n+      \"email\": \"admin@admin.com\",\n+      \"password\": \"admin123\",\n+      \"confirmPassWord\": \"admin123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"login\": [\n+ \n+  ],\n+  \"subjects\":[{\n+    \"questions\":[],\n+    \"name\":\"\"\n+\n+  }]\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700480256012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+{\n+  \"students\": [\n+    {\n+      \"userName\": \"test\",\n+      \"email\": \"test@test.com\",\n+      \"password\": \"123\",\n+      \"confirmPassWord\": \"123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"doctor\": [\n+    {\n+      \"userName\": \"admin\",\n+      \"email\": \"admin@admin.com\",\n+      \"password\": \"admin123\",\n+      \"confirmPassWord\": \"admin123\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"login\": [\n+    {\n+      \"userName\": \"admin\",\n+      \"role\": \"doctor\",\n+      \"id\": 1\n+    }\n+  ],\n+  \"subjects\":[]\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700491426328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,98 +23,8 @@\n       \"role\": \"doctor\",\n       \"id\": 1\n     }\n   ],\n-  \"subjects\":[]\n-}\n-{\n-  \"students\": [\n-    {\n-      \"userName\": \"test\",\n-      \"email\": \"test@test.com\",\n-      \"password\": \"123\",\n-      \"confirmPassWord\": \"123\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"doctor\": [\n-    {\n-      \"userName\": \"admin\",\n-      \"email\": \"admin@admin.com\",\n-      \"password\": \"admin123\",\n-      \"confirmPassWord\": \"admin123\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"login\": [\n- \n-  ],\n-  \"subjects\":[{\n-    \"questions\":[],\n-    \"name\":\"\"\n-\n-  }]\n-}\n-{\n-  \"students\": [\n-    {\n-      \"userName\": \"test\",\n-      \"email\": \"test@test.com\",\n-      \"password\": \"123\",\n-      \"confirmPassWord\": \"123\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"doctor\": [\n-    {\n-      \"userName\": \"admin\",\n-      \"email\": \"admin@admin.com\",\n-      \"password\": \"admin123\",\n-      \"confirmPassWord\": \"admin123\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"login\": [\n-    {\n-      \"userName\": \"admin\",\n-      \"role\": \"doctor\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"subjects\":[{\n-    \"questions\":[],\n-    \"name\":\"\"\n-\n-  }]\n-}\n-{\n-  \"students\": [\n-    {\n-      \"userName\": \"test\",\n-      \"email\": \"test@test.com\",\n-      \"password\": \"123\",\n-      \"confirmPassWord\": \"123\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"doctor\": [\n-    {\n-      \"userName\": \"admin\",\n-      \"email\": \"admin@admin.com\",\n-      \"password\": \"admin123\",\n-      \"confirmPassWord\": \"admin123\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"login\": [\n-    {\n-      \"userName\": \"admin\",\n-      \"role\": \"doctor\",\n-      \"id\": 1\n-    }\n-  ],\n-  \"subjects\":[{\n-    \"questions\":[],\n-    \"name\":\"\",\n-    \n-  }]\n+  \"subjects\": [\n+   \n+  ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700494194547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n       \"role\": \"doctor\",\n       \"id\": 1\n     }\n   ],\n-  \"subjects\": [\n-   \n-  ]\n+  \"subjects\": [     ]\n+      \n+  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700496279469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,37 @@\n       \"role\": \"doctor\",\n       \"id\": 1\n     }\n   ],\n-  \"subjects\": [     ]\n-      \n-  \n+  \"subjects\": [\n+    {\n+      \"name\": \"mathematique\",\n+      \"questions\": [\n+        {\n+          \"question\": \"8-9\",\n+          \"answer1\": \"error\",\n+          \"answer2\": \"1\",\n+          \"answer3\": \"-1\",\n+          \"answer4\": \"0\",\n+          \"correctAnswer\": \"-1\"\n+        }\n+      ],\n+      \"id\": 1\n+    },\n+    \n+   \n+    {\n+      \"name\": \"gabsi\",\n+      \"questions\": [\n+        {\n+          \"question\": \"tunis\",\n+          \"answer1\": \"paris\",\n+          \"answer2\": \"madrid\",\n+          \"answer3\": \"daccar\",\n+          \"answer4\": \"gabes\",\n+          \"correctAnswer\": \"gabes\"\n+        }\n+      ],\n+      \"id\": 5\n+    }\n+  ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700496284990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,8 @@\n       ],\n       \"id\": 1\n     },\n     \n-   \n     {\n       \"name\": \"gabsi\",\n       \"questions\": [\n         {\n"
                 }
             ],
             "date": 1700141281522,

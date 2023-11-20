@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/shared/components/navbar/navbar.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1700472887823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700472906431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   constructor(private service: AuthService) {}\r\n \r\n   ngOnInit(): void {\r\n     this.service.user.subscribe((res: any) => {\r\n+      console.log(res);\r\n       this.usernav = res;\r\n       console.log( this.usernav);\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1700472931972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n   constructor(private service: AuthService) {}\r\n \r\n   ngOnInit(): void {\r\n     this.service.user.subscribe((res: any) => {\r\n-      console.log(res);\r\n       this.usernav = res;\r\n       console.log(this.usernav);\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1700476912335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,7 @@\n       this.usernav = res;\r\n       console.log(this.usernav);\r\n     });\r\n   }\r\n+\r\n+  logOut(){}\r\n }\r\n"
+                }
+            ],
+            "date": 1700472887823,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\r\nimport { AuthService } from 'src/app/auth/services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-navbar',\r\n  templateUrl: './navbar.component.html',\r\n  styleUrls: ['./navbar.component.scss'],\r\n})\r\nexport class NavbarComponent implements OnInit {\r\n  usernav: any = null;\r\n\r\n  constructor(private service: AuthService) {}\r\n\r\n  ngOnInit(): void {\r\n    this.service.user.subscribe((res: any) => {\r\n      this.usernav = res;\r\n      console.log( this.usernav);\r\n    });\r\n  }\r\n}\r\n"
+        }
+    ]
+}

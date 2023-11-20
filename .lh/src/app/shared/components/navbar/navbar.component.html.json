@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/shared/components/navbar/navbar.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1700472948381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700476904054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+<mat-toolbar color=\"primary\" class=\"navbar navbar-default py-2\" dir=\"rtl\">\r\n+  <div class=\"container\">\r\n+    <!-- Brand and toggle get grouped for better mobile display -->\r\n+    <div class=\"navbar-header\">\r\n+      <a class=\"navbar-brand\" routerLinkActive=\"active\" routerLink=\"welcome\"><img\r\n+          src=\"../../../assets/images/school_white_24dp.svg\" alt=\"\"> فاينال </a>\r\n+    </div>\r\n+\r\n+    <!-- Collect the nav links, forms, and other content for toggling -->\r\n+    <div class=\"d-flex align-items-center\">\r\n+      <ul class=\"nav navbar-right d-flex align-items-center\">\r\n+        <li routerLinkActive=\"active\"><a routerLink=\"/new-exam\">أختبار جديد</a></li>\r\n+        <li routerLinkActive=\"active\"><a routerLink=\"/students\">الطلاب</a></li>\r\n+        <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n+        <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n+        <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n+        <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n+        <li class=\"username\">{{usernav?.userName}}</li>\r\n+      </ul>\r\n+\r\n+    </div><!-- /.navbar-collapse -->\r\n+  </div>\r\n+</mat-toolbar>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700477171909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n         <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n-        <li class=\"username\">{{usernav?.userName}}</li>\r\n+        <li class=\"username\" *ngIf=\"\">{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1700477183802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n         <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n-        <li class=\"username\" *ngIf=\"\">{{usernav?.userName}}</li>\r\n+        <li class=\"username\" *ngIf=\"user==null\">{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1700477200760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n         <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n-        <li class=\"username\" *ngIf=\"user==null\">{{usernav?.userName}}</li>\r\n+        <li class=\"username\" *ngIf=\"usernav==null\">{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1700477325995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n         <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n-        <li class=\"username\" *ngIf=\"usernav==null\">{{usernav?.userName}}</li>\r\n+        <li class=\"username\" *ngIf=\"usernav !=null\">{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1700477450285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n         <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n-        <li class=\"username\" *ngIf=\"usernav !=null\">{{usernav?.userName}}</li>\r\n+        <li *ngIf=\"usernav !=null\" class=\"username\" >{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1700477502483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n         <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n-        <li *ngIf=\"usernav !=null\" class=\"username\">{{usernav?.userName}}</li>\r\n+        <li *ngIf=\"usernav !==null\" class=\"username\">{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1700477829986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n     <div class=\"d-flex align-items-center\">\r\n       <ul class=\"nav navbar-right d-flex align-items-center\">\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/new-exam\">أختبار جديد</a></li>\r\n         <li routerLinkActive=\"active\"><a routerLink=\"/students\">الطلاب</a></li>\r\n-        <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n-        <li routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n-        <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n-        <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n+        <li *ngIf=\"usernav.role\" routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n+        <li *ngIf=\"usernav !==null\" routerLinkActive=\"active\" (click)=\"logOut()\"><a routerLink=\"/login\">خروج</a></li>\r\n+        <li *ngIf=\"usernav !==null\" routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n+        <li *ngIf=\"usernav !==null\" routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n         <li *ngIf=\"usernav !==null\" class=\"username\">{{usernav?.userName}}</li>\r\n       </ul>\r\n \r\n     </div><!-- /.navbar-collapse -->\r\n"
+                }
+            ],
+            "date": 1700472948381,
+            "name": "Commit-0",
+            "content": "<mat-toolbar color=\"primary\" class=\"navbar navbar-default py-2\" dir=\"rtl\">\r\n  <div class=\"container\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    <div class=\"navbar-header\">\r\n      <a class=\"navbar-brand\" routerLinkActive=\"active\" routerLink=\"welcome\"><img\r\n          src=\"../../../assets/images/school_white_24dp.svg\" alt=\"\"> فاينال </a>\r\n    </div>\r\n\r\n    <!-- Collect the nav links, forms, and other content for toggling -->\r\n    <div class=\"d-flex align-items-center\">\r\n      <ul class=\"nav navbar-right d-flex align-items-center\">\r\n        <li routerLinkActive=\"active\"><a routerLink=\"/new-exam\">أختبار جديد</a></li>\r\n        <li routerLinkActive=\"active\"><a routerLink=\"/students\">الطلاب</a></li>\r\n        <li routerLinkActive=\"active\"><a routerLink=\"/subjects\">المواد </a></li>\r\n        <li routerLinkActive=\"active\"><a routerLink=\"/login\">خروج</a></li>\r\n        <li routerLinkActive=\"active\"><a routerLink=\"/login\">دخول</a></li>\r\n        <li routerLinkActive=\"active\"><a routerLink=\"/register\">تسجيل</a></li>\r\n        <li class=\"username\">{{usernav?.userName}}</li>\r\n      </ul>\r\n\r\n    </div><!-- /.navbar-collapse -->\r\n  </div>\r\n</mat-toolbar>"
+        }
+    ]
+}

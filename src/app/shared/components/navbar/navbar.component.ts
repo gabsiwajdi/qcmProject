@@ -13,8 +13,18 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.user.subscribe((res: any) => {
-      this.usernav = res;
-      console.log('navbar ' + this.usernav);
+      if (res.role) {
+        this.usernav = res;
+        console.log('res' + res);
+      }
+    });
+  }
+
+  logOut() {
+    const model = {};
+    this.service.login(model).subscribe((res) => {
+      this.usernav == null;
+      this.service.user.next(res); // modifier la valeur de la varible user (qui est dans ayth service).
     });
   }
 }

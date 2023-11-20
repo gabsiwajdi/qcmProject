@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/doctor/services/doctor.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700490652211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700490699774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,15 @@\n import { HttpClient } from '@angular/common/http';\n import { Injectable } from '@angular/core';\n+import { environment } from 'src/environments/environment';\n \n @Injectable({\n   providedIn: 'root',\n })\n export class DoctorService {\n   constructor(private http: HttpClient) {}\n+\n+\n+  creerSubject(){\n+    return this.http.post(environment.baseApi + )\n+  }\n }\n"
+                },
+                {
+                    "date": 1700490709888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n })\n export class DoctorService {\n   constructor(private http: HttpClient) {}\n \n-\n-  creerSubject(){\n-    return this.http.post(environment.baseApi + )\n+  creerSubject() {\n+    return this.http.post(environment.baseApi + '');\n   }\n }\n"
+                }
+            ],
+            "date": 1700490652211,
+            "name": "Commit-0",
+            "content": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class DoctorService {\n\n  constructor(private http:HttpClient) { }\n}\n"
+        }
+    ]
+}

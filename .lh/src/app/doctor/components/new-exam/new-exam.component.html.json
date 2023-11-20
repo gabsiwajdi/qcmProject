@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1700140046517,
@@ -12,6 +12,10 @@
                 {
                     "date": 1700140082497,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         <mat-step label=\"اسئلة اللغة العربية\" completed=\"true\">\r\n             <div class=\"question\">\r\n                 <form>\r\n                     <mat-form-field appearance=\"outline\" color=\"warn\" class=\"queiz\">\r\n-                        <mat-label>السؤال</mat-label>\r\n+                        <mat-label>Question</mat-label>\r\n                         <input matInput type=\"text\">\r\n                     </mat-form-field>\r\n \r\n                     <div class=\"row\">\r\n"
+                },
+                {
+                    "date": 1700480562665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n             <div class=\"AddSubject\">\r\n                 <div>Libelle Matiere </div>\r\n                 <mat-form-field appearance=\"fill\" color=\"warn\">\r\n                     <mat-label> Libelle Matiere</mat-label>\r\n-                    <input matInput type=\"text\">\r\n+                    <input matInput type=\"text [formControl]=\" name\">\r\n                 </mat-form-field>\r\n                 <button color=\"warn\" mat-raised-button matStepperNext>Commencer</button>\r\n             </div>\r\n \r\n"
                 }
             ],
             "date": 1700140046517,

@@ -19,9 +19,40 @@
   ],
   "login": [
     {
-      "userName": "test",
-      "role": "students",
+      "userName": "admin",
+      "role": "doctor",
       "id": 1
+    }
+  ],
+  "subjects": [
+    {
+      "name": "mathematique",
+      "questions": [
+        {
+          "question": "8-9",
+          "answer1": "error",
+          "answer2": "1",
+          "answer3": "-1",
+          "answer4": "0",
+          "correctAnswer": "-1"
+        }
+      ],
+      "id": 1
+    },
+    
+    {
+      "name": "gabsi",
+      "questions": [
+        {
+          "question": "tunis",
+          "answer1": "paris",
+          "answer2": "madrid",
+          "answer3": "daccar",
+          "answer4": "gabes",
+          "correctAnswer": "gabes"
+        }
+      ],
+      "id": 5
     }
   ]
 }

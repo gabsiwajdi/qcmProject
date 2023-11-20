@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/auth/components/login/login.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1700473172857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700473201336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,9 @@\n         userName: this.users[index].userName,\r\n         role: this.type,\r\n       };\r\n       this.service.login(model).subscribe((res: any) => {\r\n+        this.service.user.next(res);\r\n         Swal.fire({\r\n           icon: 'success',\r\n           text: 'Binevenu !',\r\n         });\r\n"
+                },
+                {
+                    "date": 1700473335579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n       this.service.login(model).subscribe((res: any) => {\r\n         this.service.user.next(res);\r\n         Swal.fire({\r\n           icon: 'success',\r\n-          text: 'Binevenu !',\r\n+          text: 'Binevenu !' + model.userName,\r\n         });\r\n       });\r\n       this.router.navigate(['/subjects']);\r\n     }\r\n"
+                },
+                {
+                    "date": 1700473371212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n       this.service.login(model).subscribe((res: any) => {\r\n         this.service.user.next(res);\r\n         Swal.fire({\r\n           icon: 'success',\r\n-          text: 'Binevenu !' + model.userName,\r\n+          text: 'Binevenu !' +'' +  model.userName,\r\n         });\r\n       });\r\n       this.router.navigate(['/subjects']);\r\n     }\r\n"
+                }
+            ],
+            "date": 1700473172857,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\r\nimport { AuthService } from '../../services/auth.service';\r\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport Swal from 'sweetalert2';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss'],\r\n})\r\nexport class LoginComponent implements OnInit {\r\n  users: any[] = [];\r\n  loginForm!: FormGroup;\r\n  type: string = 'students';\r\n  constructor(\r\n    private service: AuthService,\r\n    private fb: FormBuilder,\r\n    private router: Router\r\n  ) {}\r\n\r\n  ngOnInit(): void {\r\n    this.getUsers();\r\n    this.creerForm();\r\n  }\r\n  // creer la formulaire d login\r\n  creerForm() {\r\n    this.loginForm = this.fb.group({\r\n      type: [this.type],\r\n      email: ['', [Validators.required, Validators.email]],\r\n      password: ['', [Validators.required]],\r\n    });\r\n  }\r\n\r\n  //recuperer la liste des useres celon leur type (etudient ou doctor )\r\n  getUsers() {\r\n    \r\n    this.service.getAllStudents(this.type).subscribe((res: any) => {\r\n      this.users = res;\r\n      console.log(this.users);\r\n    });\r\n  }\r\n  // recupere le role de utilisateur (celon la button radio selectionner)\r\n  getRole(event: any) {\r\n    this.type = event.value;\r\n    this.getUsers();\r\n  }\r\n\r\n  submit() {\r\n    let index = this.users.findIndex(\r\n      (item) =>\r\n        item.email == this.loginForm.value.email &&\r\n        item.password == this.loginForm.value.password\r\n    );\r\n    if (index == -1) {\r\n      Swal.fire({\r\n        icon: 'error',\r\n        text: 'E-mail ou Password invalid !',\r\n      });\r\n    } else {\r\n      const model = {\r\n        userName: this.users[index].userName,\r\n        role: this.type,\r\n      };\r\n      this.service.login(model).subscribe((res: any) => {\r\n        Swal.fire({\r\n          icon: 'success',\r\n          text: 'Binevenu !',\r\n        });\r\n      });\r\n      this.router.navigate(['/subjects']);\r\n    }\r\n  }\r\n}\r\n"
+        }
+    ]
+}

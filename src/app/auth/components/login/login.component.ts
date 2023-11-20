@@ -62,9 +62,10 @@ export class LoginComponent implements OnInit {
         role: this.type,
       };
       this.service.login(model).subscribe((res: any) => {
+        this.service.user.next(res);
         Swal.fire({
           icon: 'success',
-          text: 'Binevenu !',
+          text: 'Binevenu !' + '' + model.userName,
         });
       });
       this.router.navigate(['/subjects']);

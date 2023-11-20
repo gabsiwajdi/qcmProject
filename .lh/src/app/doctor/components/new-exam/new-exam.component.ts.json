@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/doctor/components/new-exam/new-exam.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700480489962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700480652274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   templateUrl: './new-exam.component.html',\r\n   styleUrls: ['./new-exam.component.scss'],\r\n })\r\n export class NewExamComponent implements OnInit {\r\n-  name = new FormControl();\r\n+  name = new FormControl(); //un formulaire avec un seul valeur\r\n \r\n   constructor() {}\r\n \r\n   ngOnInit(): void {}\r\n"
+                },
+                {
+                    "date": 1700480678226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n   styleUrls: ['./new-exam.component.scss'],\r\n })\r\n export class NewExamComponent implements OnInit {\r\n   name = new FormControl(); //un formulaire avec un seul valeur\r\n+  questions:any[]=[]\r\n \r\n   constructor() {}\r\n \r\n   ngOnInit(): void {}\r\n"
+                }
+            ],
+            "date": 1700480489962,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\r\nimport { FormControl, FormGroup } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'app-new-exam',\r\n  templateUrl: './new-exam.component.html',\r\n  styleUrls: ['./new-exam.component.scss']\r\n})\r\nexport class NewExamComponent implements OnInit {\r\n  name=new FormControl\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n"
+        }
+    ]
+}
