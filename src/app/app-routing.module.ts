@@ -8,17 +8,17 @@ import { SubjectsComponent } from './doctor/components/subjects/subjects.compone
 import { ExamComponent } from './student/components/exam/exam.component';
 
 const routes: Routes = [
-  {path:'login' , component:LoginComponent},
-  {path:'register' , component:RegisterComponent},
-  {path:'exam' , component:ExamComponent},
-  {path:'students' , component:StudentsComponent},
-  {path:'subjects' , component:SubjectsComponent},
-  {path:'new-exam' , component:NewExamComponent},
-  {path:'**' , redirectTo:'exam' , pathMatch:'full'}
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'exam/:id', component: ExamComponent },
+  { path: 'students', component: StudentsComponent },
+  { path: 'subjects', component: SubjectsComponent },
+  { path: 'new-exam', component: NewExamComponent },
+  { path: '**', redirectTo: 'exam', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

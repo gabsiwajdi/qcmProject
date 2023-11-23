@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/student/components/exam/exam.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700582029293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700582055819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   templateUrl: './exam.component.html',\r\n   styleUrls: ['./exam.component.scss'],\r\n })\r\n export class ExamComponent implements OnInit {\r\n+  id:any\r\n   constructor(private route: ActivatedRoute) {}\r\n \r\n   ngOnInit(): void {}\r\n }\r\n"
+                },
+                {
+                    "date": 1700582083923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n   styleUrls: ['./exam.component.scss'],\r\n })\r\n export class ExamComponent implements OnInit {\r\n   id: any;\r\n-  constructor(private route: ActivatedRoute) {}\r\n+  constructor(private route: ActivatedRoute) {\r\n+    this.id = this.route.snapshot.g\r\n+  }\r\n \r\n   ngOnInit(): void {}\r\n }\r\n"
+                }
+            ],
+            "date": 1700582029293,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'app-exam',\r\n  templateUrl: './exam.component.html',\r\n  styleUrls: ['./exam.component.scss']\r\n})\r\nexport class ExamComponent implements OnInit {\r\n\r\n  constructor(private route: ActivatedRoute) { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n"
+        }
+    ]
+}

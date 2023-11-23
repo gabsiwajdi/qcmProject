@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/student/components/exam/exam.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1700652708652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700652732356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,12 @@\n             color: #FFf;\r\n         }\r\n     }\r\n \r\n+    .left-align-button {\r\n+        text-align: left;\r\n+      }\r\n+\r\n     .quizBox {\r\n        .row {\r\n            padding-right: 30px;\r\n            .col-sm-12 {\r\n@@ -30,8 +34,6 @@\n         strong {\r\n             font-size: 22px;\r\n         }\r\n     }\r\n-    .left-align-button {\r\n-        text-align: left;\r\n-      }\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700652795310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,38 +1,43 @@\n .examBox {\r\n-  width: 90%;\r\n-  margin: 50px auto;\r\n-  border: 1px solid #ddd;\r\n-  border-radius: 10px;\r\n-  padding: 20px;\r\n-  .examhead {\r\n-    margin-top: -40px;\r\n-\r\n-    margin-bottom: 20px;\r\n-    h2 {\r\n-      font-family: \"Almarai\", sans-serif;\r\n-      display: inline-block;\r\n-      padding: 5px 88px;\r\n-      background-color: #f44336;\r\n-      border-radius: 30px;\r\n-      font-size: 28px;\r\n-      color: #fff;\r\n+    width: 90%;\r\n+    margin: 50px auto;\r\n+    border: 1px solid #ddd;\r\n+    border-radius: 10px;\r\n+    padding: 20px;\r\n+  \r\n+    .examhead {\r\n+      margin-top: -40px;\r\n+      margin-bottom: 20px;\r\n+      h2 {\r\n+        font-family: \"Almarai\", sans-serif;\r\n+        display: inline-block;\r\n+        padding: 5px 88px;\r\n+        background-color: #f44336;\r\n+        border-radius: 30px;\r\n+        font-size: 28px;\r\n+        color: #fff;\r\n+      }\r\n     }\r\n+  \r\n+    .left-align-button {\r\n+      text-align: left;\r\n+    }\r\n+  \r\n+    .quizBox {\r\n+      .row {\r\n+        padding-right: 30px;\r\n+        .col-sm-12 {\r\n+          margin: 7px 0px;\r\n+          font-size: 20px;\r\n+        }\r\n+      }\r\n+      strong {\r\n+        font-size: 22px;\r\n+      }\r\n+    }\r\n   }\r\n-\r\n+  \r\n   .left-align-button {\r\n     text-align: left;\r\n   }\r\n-\r\n-  .quizBox {\r\n-    .row {\r\n-      padding-right: 30px;\r\n-      .col-sm-12 {\r\n-        margin: 7px 0px;\r\n-        font-size: 20px;\r\n-      }\r\n-    }\r\n-    strong {\r\n-      font-size: 22px;\r\n-    }\r\n-  }\r\n-}\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700652985595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,35 @@\n .examBox {\r\n-  width: 90%;\r\n-  margin: 50px auto;\r\n-  border: 1px solid #ddd;\r\n-  border-radius: 10px;\r\n-  padding: 20px;\r\n+    width: 90%;\r\n+    margin: 50px auto;\r\n+    border: 1px solid #DDD;\r\n+    border-radius: 10px;\r\n+    padding: 20px;\r\n+    .examhead {\r\n+        margin-top: -40px;\r\n \r\n-  .examhead {\r\n-    margin-top: -40px;\r\n-    margin-bottom: 20px;\r\n-    h2 {\r\n-      font-family: \"Almarai\", sans-serif;\r\n-      display: inline-block;\r\n-      padding: 5px 88px;\r\n-      background-color: #f44336;\r\n-      border-radius: 30px;\r\n-      font-size: 28px;\r\n-      color: #fff;\r\n+        margin-bottom: 20px;\r\n+        h2 {\r\n+            font-family: 'Almarai', sans-serif;\r\n+            display: inline-block;\r\n+            padding: 5px 88px;\r\n+            background-color: #f44336;\r\n+            border-radius: 30px;\r\n+            font-size: 28px;\r\n+            color: #FFf;\r\n+        }\r\n     }\r\n-  }\r\n \r\n-  .left-align-button {\r\n-    text-align: left;\r\n-  }\r\n-\r\n-  .quizBox {\r\n-    .row {\r\n-      padding-right: 30px;\r\n-      .col-sm-12 {\r\n-        margin: 7px 0px;\r\n-        font-size: 20px;\r\n-      }\r\n+    .quizBox {\r\n+       .row {\r\n+           padding-right: 30px;\r\n+           .col-sm-12 {\r\n+            margin: 7px 0px;\r\n+            font-size: 20px;\r\n+         }\r\n+       }\r\n+        strong {\r\n+            font-size: 22px;\r\n+        }\r\n     }\r\n-    strong {\r\n-      font-size: 22px;\r\n-    }\r\n-  }\r\n-}\r\n-\r\n-.left-align-button {\r\n-  text-align: left;\r\n-}\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1700652708652,
+            "name": "Commit-0",
+            "content": ".examBox {\r\n    width: 90%;\r\n    margin: 50px auto;\r\n    border: 1px solid #DDD;\r\n    border-radius: 10px;\r\n    padding: 20px;\r\n    .examhead {\r\n        margin-top: -40px;\r\n\r\n        margin-bottom: 20px;\r\n        h2 {\r\n            font-family: 'Almarai', sans-serif;\r\n            display: inline-block;\r\n            padding: 5px 88px;\r\n            background-color: #f44336;\r\n            border-radius: 30px;\r\n            font-size: 28px;\r\n            color: #FFf;\r\n        }\r\n    }\r\n\r\n    .quizBox {\r\n       .row {\r\n           padding-right: 30px;\r\n           .col-sm-12 {\r\n            margin: 7px 0px;\r\n            font-size: 20px;\r\n         }\r\n       }\r\n        strong {\r\n            font-size: 22px;\r\n        }\r\n    }\r\n    .left-align-button {\r\n        text-align: left;\r\n      }\r\n}"
+        }
+    ]
+}

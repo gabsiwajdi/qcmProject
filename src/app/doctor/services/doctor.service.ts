@@ -15,4 +15,16 @@ export class DoctorService {
   sdeleteSubject(model: any, id: number) {
     return this.http.put(environment.baseApi + 'subjects/' + id, model);
   }
+
+  getAllSubjects() {
+    return this.http.get(environment.baseApi + 'subjects');
+  }
+
+  deleteSubject(id: number) {
+    return this.http.delete(environment.baseApi + 'subjects/' + id);
+  }
+
+  getSubjectById(id: number) {
+    return this.http.get(environment.baseApi + 'subjects/' + id);
+  }
 }

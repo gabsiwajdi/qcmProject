@@ -9,12 +9,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="d-flex align-items-center">
       <ul class="nav navbar-right d-flex align-items-center">
-        <li *ngIf="usernav?.role=='doctor'" routerLinkActive="active"><a routerLink="/new-exam">أختبار جديد</a></li>
-        <li *ngIf="usernav?.role=='doctor'" routerLinkActive="active"><a routerLink="/students">الطلاب</a></li>
-        <li *ngIf="usernav !==null" routerLinkActive="active"><a routerLink="/subjects">المواد </a></li>
-        <li *ngIf="usernav !==null" routerLinkActive="active" (click)="logOut()"><a routerLink="/login">خروج</a></li>
-        <li *ngIf="usernav ==null" routerLinkActive="active"><a routerLink="/login">دخول</a></li>
-        <li *ngIf="usernav ==null" routerLinkActive="active"><a routerLink="/register">تسجيل</a></li>
+        <li *ngIf="usernav?.role=='doctor'" routerLinkActive="active"><a routerLink="/new-exam">Nouveau Matiére</a></li>
+        <li *ngIf="usernav?.role=='doctor'" routerLinkActive="active"><a routerLink="/students">Etudiant</a></li>
+        <li *ngIf="usernav !==null" routerLinkActive="active"><a routerLink="/subjects">Matiéres </a></li>
+        <li *ngIf="usernav !==null" routerLinkActive="active" (click)="logOut()"><a routerLink="/login">Sortir</a></li>
+        <li *ngIf="usernav ==null" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+        <li *ngIf="usernav ==null" routerLinkActive="active"><a routerLink="/register">Inscription</a></li>
         <li *ngIf="usernav !==null" class="username">{{usernav?.userName}}</li>
       </ul>
 

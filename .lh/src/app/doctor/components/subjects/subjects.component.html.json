@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/doctor/components/subjects/subjects.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700579410723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700579471221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,17 +9,7 @@\n                 <button mat-raised-button color=\"primary\" class=\"mx-1\">عرض</button>\r\n                 <button mat-raised-button class=\"mx-1 btn btn-success\">ابدأ الاختبار</button>\r\n             </div>\r\n         </div>\r\n-        <div class=\"col-md-3 col-sm-12\">\r\n-            <div class=\"namesubject\">\r\n-                <div>اللغة العربية</div>\r\n-            </div>\r\n-            <div class=\"subBtn\">\r\n-                <button mat-raised-button color=\"warn\" class=\"mx-1\">حذف</button>\r\n-                <button mat-raised-button color=\"primary\" class=\"mx-1\">عرض</button>\r\n-                <button mat-raised-button class=\"mx-1 btn btn-success\">ابدأ الاختبار</button>\r\n \r\n-            </div>\r\n-        </div>\r\n     </div>\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700579517133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <div class=\"subjectBox\">\r\n     <div class=\"row\">\r\n-        <div class=\"col-md-3 col-sm-12\" *ngFor=\"let item of subjects\">\r\n+        <div class=\"col-md-3 col-sm-12\" *ngFor=\"let item of subjects ; let index=index\">\r\n             <div class=\"namesubject\">\r\n                 <div>اللغة {{item.name}}</div>\r\n             </div>\r\n             <div class=\"subBtn\">\r\n"
+                }
+            ],
+            "date": 1700579410723,
+            "name": "Commit-0",
+            "content": "\r\n            <div class=\"subjectBox\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-3 col-sm-12\" *ngFor=\"let item of subjects\">\r\n                        <div class=\"namesubject\">\r\n                            <div>اللغة {{item.name}}</div>\r\n                        </div>\r\n                        <div class=\"subBtn\">\r\n                         <button mat-raised-button color=\"warn\"  class=\"mx-1\">حذف</button>\r\n                         <button mat-raised-button color=\"primary\"  class=\"mx-1\">عرض</button>\r\n                         <button mat-raised-button class=\"mx-1 btn btn-success\">ابدأ الاختبار</button>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-md-3 col-sm-12\">\r\n                        <div class=\"namesubject\">\r\n                            <div>اللغة العربية</div>\r\n                        </div>\r\n                        <div class=\"subBtn\">\r\n                         <button mat-raised-button color=\"warn\"  class=\"mx-1\">حذف</button>\r\n                         <button mat-raised-button color=\"primary\"  class=\"mx-1\">عرض</button>\r\n                         <button mat-raised-button class=\"mx-1 btn btn-success\">ابدأ الاختبار</button>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>"
+        }
+    ]
+}

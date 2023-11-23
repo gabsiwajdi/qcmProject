@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/doctor/components/subjects/subjects.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700579309082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700579318976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n   subjects: any[] = [];\r\n \r\n   constructor(private service: DoctorService) {}\r\n \r\n-  ngOnInit(): void {}\r\n+  ngOnInit(): void {\r\n+    this.getAllSubjects()\r\n+  }\r\n \r\n   getAllSubjects() {\r\n     this.service.getAllSubjects().subscribe((res: any) => {\r\n       this.subjects = res;\r\n"
+                },
+                {
+                    "date": 1700579712842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Component, OnInit } from '@angular/core';\r\n import { DoctorService } from '../../services/doctor.service';\r\n+import { AuthService } from 'src/app/auth/services/auth.service';\r\n \r\n @Component({\r\n   selector: 'app-subjects',\r\n   templateUrl: './subjects.component.html',\r\n@@ -8,9 +9,9 @@\n })\r\n export class SubjectsComponent implements OnInit {\r\n   subjects: any[] = [];\r\n \r\n-  constructor(private service: DoctorService) {}\r\n+  constructor(private service: DoctorService,private authService:AuthService) {}\r\n \r\n   ngOnInit(): void {\r\n     this.getAllSubjects();\r\n   }\r\n"
+                }
+            ],
+            "date": 1700579309082,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\r\nimport { DoctorService } from '../../services/doctor.service';\r\n\r\n@Component({\r\n  selector: 'app-subjects',\r\n  templateUrl: './subjects.component.html',\r\n  styleUrls: ['./subjects.component.scss']\r\n})\r\nexport class SubjectsComponent implements OnInit {\r\n  subjects:any[]=[];\r\n\r\n  constructor(private service :DoctorService) { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n\r\n  getAllSubjects(){\r\n    this.service.getAllSubjects().subscribe((res:any)=>{\r\n      this.subjects=res\r\n      console.log(this.subjects);\r\n    })\r\n  }\r\n}\r\n"
+        }
+    ]
+}

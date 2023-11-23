@@ -26,33 +26,134 @@
   ],
   "subjects": [
     {
-      "name": "mathematique",
+      "name": "Angular",
       "questions": [
         {
-          "question": "8-9",
-          "answer1": "error",
-          "answer2": "1",
-          "answer3": "-1",
-          "answer4": "0",
-          "correctAnswer": "-1"
+          "question": " ? Quelle est la syntaxe pour le databinding bidirectionnel en Angular ",
+          "answer1": " [(ngModel)] ",
+          "answer2": "(ngData)",
+          "answer3": "[ngBind]",
+          "answer4": "{{ngBind}}",
+          "correctAnswer": " [(ngModel)] "
+        },
+        {
+          "question": " ? Quelle est la signification de l'acronyme \"SPA\" en Angular ",
+          "answer1": "Simple Page Application",
+          "answer2": "Single Page Application",
+          "answer3": " Static Page Application",
+          "answer4": "Server Page Application",
+          "correctAnswer": "Single Page Application"
+        },
+        {
+          "question": " ? Comment s'appelle le système de gestion des dépendances utilisé par Angular ",
+          "answer1": "NPM",
+          "answer2": "Gradle",
+          "answer3": "Maven",
+          "answer4": "YARN",
+          "correctAnswer": "NPM"
+        },
+        {
+          "question": " ? Quelle directive Angular est utilisée pour créer un lien vers un autre composant ",
+          "answer1": "ng-link",
+          "answer2": "ng-href",
+          "answer3": "routerLink",
+          "answer4": "link-to",
+          "correctAnswer": "routerLink"
+        },
+        {
+          "question": " ? Quelle est la signification de \"ngOnInit\" dans Angular ",
+          "answer1": "C'est un hook de cycle de vie appelé après la création du composant.",
+          "answer2": "C'est un service HTTP d'Angular.",
+          "answer3": "C'est un opérateur de transformation de données.",
+          "answer4": " C'est un type de module Angular.",
+          "correctAnswer": "C'est un hook de cycle de vie appelé après la création du composant."
         }
       ],
       "id": 1
     },
-    
     {
-      "name": "gabsi",
+      "name": "Spring Boot",
       "questions": [
         {
-          "question": "tunis",
-          "answer1": "paris",
-          "answer2": "madrid",
-          "answer3": "daccar",
-          "answer4": "gabes",
-          "correctAnswer": "gabes"
+          "question": "? Qu'est-ce que Spring Boot ",
+          "answer1": "Un framework de gestion de projet",
+          "answer2": "Une extension de Spring Framework",
+          "answer3": " Une bibliothèque de visualisation de données",
+          "answer4": " Un serveur d'application",
+          "correctAnswer": "Une extension de Spring Framework"
+        },
+        {
+          "question": "? Comment définir un point de terminaison REST dans un contrôleur Spring ",
+          "answer1": "@RequestMapping",
+          "answer2": "@Endpoint",
+          "answer3": "@RestEndpoint",
+          "answer4": "@RestMapping",
+          "correctAnswer": "@RequestMapping"
+        },
+        {
+          "question": " ? Quelle est la différence entre Spring MVC et Spring Boot ",
+          "answer1": "Spring MVC est utilisé pour la sécurité, tandis que Spring Boot est utilisé pour la création de microservices.",
+          "answer2": " Spring MVC est un sous-projet de Spring Boot.",
+          "answer3": "Spring Boot est une extension de Spring MVC, facilitant la création de projets autonomes.",
+          "answer4": "Spring Boot est utilisé pour la création de pages Web dynamiques, tandis que Spring MVC est utilisé pour la gestion des données.",
+          "correctAnswer": "Spring Boot est une extension de Spring MVC, facilitant la création de projets autonomes."
+        },
+        {
+          "question": " ? Quelle annotation Spring est utilisée pour injecter une dépendance ",
+          "answer1": " @Inject",
+          "answer2": "@Autowired",
+          "answer3": "@Dependency",
+          "answer4": "@InjectDependency",
+          "correctAnswer": "@Autowired"
+        },
+        {
+          "question": " ? Comment définir une entité dans Spring Data JPA ",
+          "answer1": " @Entity",
+          "answer2": "@Model",
+          "answer3": "@Database",
+          "answer4": "@DataEntity",
+          "correctAnswer": " @Entity"
         }
       ],
-      "id": 5
+      "id": 2
+    },
+    {
+      "name": "React JS",
+      "questions": [
+        {
+          "question": " ? Quelle est la bibliothèque utilisée pour gérer l'état dans React ",
+          "answer1": "Redux",
+          "answer2": "Flux",
+          "answer3": "React State Manager",
+          "answer4": " Reactivity",
+          "correctAnswer": "Redux"
+        },
+        {
+          "question": " ? Comment se nomme le cycle de vie dans une classe de composant React ",
+          "answer1": "LifeCycle",
+          "answer2": " ReactCycle",
+          "answer3": "ComponentCycle",
+          "answer4": "componentDidMount",
+          "correctAnswer": "componentDidMount"
+        },
+        {
+          "question": " ? Comment rend-on un composant React insensible aux modifications de l'état ou des propriétés ",
+          "answer1": "shouldComponentUpdate",
+          "answer2": "componentWillUpdate",
+          "answer3": "static getDerivedStateFromProps",
+          "answer4": "PureComponent",
+          "correctAnswer": "PureComponent"
+        },
+        {
+          "question": " ? Quelle fonctionnalité de React permet de passer des données à un composant parent ",
+          "answer1": "Callback Functions",
+          "answer2": "Props",
+          "answer3": " State",
+          "answer4": "Event Emitters",
+          "correctAnswer": "Callback Functions"
+        }
+      ],
+      "id": 3
     }
   ]
 }
