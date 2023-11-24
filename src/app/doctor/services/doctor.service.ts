@@ -27,4 +27,8 @@ export class DoctorService {
   getSubjectById(id: number) {
     return this.http.get(environment.baseApi + 'subjects/' + id);
   }
+
+  getStudentById(id: number) {
+    return this.http.get(environment.baseApi + 'students/' + id);
+  }
 }

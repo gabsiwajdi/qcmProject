@@ -60,6 +60,7 @@ export class LoginComponent implements OnInit {
       const model = {
         userName: this.users[index].userName,
         role: this.type,
+        userId: this.users[index].id,
       };
       this.service.login(model).subscribe((res: any) => {
         this.service.user.next(res);

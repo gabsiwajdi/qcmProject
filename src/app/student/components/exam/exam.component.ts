@@ -12,9 +12,12 @@ import Swal from 'sweetalert2';
 export class ExamComponent implements OnInit {
   id: any;
   subject: any;
-  user: any;
+  user: any = {};
   total: number = 0;
   shwoResult = false;
+  validExam = true;
+  studentInfo: any = {};
+  userSubjects: any[] = []; // Contient des matières pour lesquelles l` étudiants déjà passé des examens .
   constructor(
     private route: ActivatedRoute,
     private service: DoctorService,
@@ -25,7 +28,7 @@ export class ExamComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSubjectById();
-    this.getUserInfo();
+    this.getLogedInUser();
   }
 
   getSubjectById() {
@@ -58,12 +61,21 @@ export class ExamComponent implements OnInit {
     console.log(this.subject.questions);
   }
 
-  getUserInfo() {
+  getLogedInUser() {
     // utilisateur qui est deja login
-
-    this.authService.getRole().subscribe((res: any) => {
+    this.authService.getRole().subscribe((res) => {
       this.user = res;
-      console.log(this.user);
+      this.getUserData();
+      console.log('ici ici', this.user);
+    });
+  }
+  // get information de l'etudiant connecter
+  getUserData() {
+    this.authService.getStudentById(this.user.userId).subscribe((res: any) => {
+      this.studentInfo = res;
+      console.log('ttttt', this.studentInfo);
+      this.userSubjects = res?.subjects ? res?.subjects : []; // si le tabeaux existe deja modifier sinon cree avec le nouveau valeur ?si :else !!
+      this.checkValidExam();
     });
   }
 
@@ -78,6 +90,39 @@ export class ExamComponent implements OnInit {
       }
     }
     this.shwoResult = true;
-    console.log(this.total);
+    console.log('user subjects', this.userSubjects);
+    this.userSubjects.push({
+      name: this.subject.name,
+      id: this.id,
+      degree: this.total,
+    });
+    const model = {
+      userName: this.studentInfo.userName,
+      email: this.studentInfo.email,
+      password: this.studentInfo.password,
+      confirmPassWord: this.studentInfo.confirmPassWord,
+      id: this.studentInfo.id,
+      subjects: this.userSubjects,
+    };
+    this.authService.updateStudent(this.user.userId, model).subscribe((res) => {
+      console.log('model model', model);
+      Swal.fire({
+        icon: 'success',
+        text: 'Le Resultat Est Bien Enregistrer',
+      });
+    });
+    this.validExam = false;
+  }
+  checkValidExam() {
+    for (let x in this.userSubjects) {
+      if (this.userSubjects[x].id == this.id) {
+        this.validExam = false;
+        this.total = this.userSubjects[x].degree;
+        Swal.fire({
+          icon: 'info',
+          text: 'Vous avez deja Passer ce examan ',
+        });
+      }
+    }
   }
 }

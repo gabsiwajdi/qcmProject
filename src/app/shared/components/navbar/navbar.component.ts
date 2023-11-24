@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
     this.service.user.subscribe((res: any) => {
       if (res.role) {
         this.usernav = res;
-        console.log('res' + res);
+        console.log('res', res);
       }
     });
   }

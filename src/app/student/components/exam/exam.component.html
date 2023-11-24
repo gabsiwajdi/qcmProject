@@ -6,28 +6,32 @@
         <strong><span class=" text-danger">Question N° {{index+1}} : </span> {{item?.question}}</strong>
         <div class="row mt-3">
             <div class="col-md-6 col-sm-12">
-                <mat-radio-button value="answer1" *ngIf="user?.role=='students'" color="warn" name="{{index}}"
-                    value="{{item.answer1}}" (change)="getAnswer($event)"></mat-radio-button>
+                <mat-radio-button value="answer1" *ngIf="user?.role=='students' && !shwoResult && validExam "
+                    color="warn" name="{{index}}" value="{{item.answer1}}"
+                    (change)="getAnswer($event)"></mat-radio-button>
                 <!--name="{{index}}" pour que chaque group de button radio a un seul selection  -->
                 <label>A/ {{item.answer1}}</label>
                 <!-- value="{{item.answer1}}"& (change)="getAnswer($event)" pour recuperer la reponse selectionner -->
             </div>
 
             <div class="col-md-6 col-sm-12">
-                <mat-radio-button value="answer2" *ngIf="user?.role=='students'" name="{{index}}" color="warn"
-                    value="{{item.answer2}}" (change)="getAnswer($event)"></mat-radio-button>
+                <mat-radio-button value="answer2" *ngIf="user?.role=='students' && !shwoResult && validExam "
+                    name="{{index}}" color="warn" value="{{item.answer2}}"
+                    (change)="getAnswer($event)"></mat-radio-button>
                 <label>B/ {{item.answer2}}</label>
             </div>
 
             <div class="col-md-6 col-sm-12">
-                <mat-radio-button value="answer3" *ngIf="user?.role=='students'" name="{{index}}" color="warn"
-                    value="{{item.answer3}}" (change)="getAnswer($event)"></mat-radio-button>
+                <mat-radio-button value="answer3" *ngIf="user?.role=='students' && !shwoResult && validExam "
+                    name="{{index}}" color="warn" value="{{item.answer3}}"
+                    (change)="getAnswer($event)"></mat-radio-button>
                 <label>C/ {{item.answer3}}</label>
             </div>
 
             <div class="col-md-6 col-sm-12">
-                <mat-radio-button value="answer4" *ngIf="user?.role=='students'" name="{{index}}" color="warn"
-                    value="{{item.answer4}}" (change)="getAnswer($event)"></mat-radio-button>
+                <mat-radio-button value="answer4" *ngIf="user?.role=='students' && !shwoResult && validExam "
+                    name="{{index}}" color="warn" value="{{item.answer4}}"
+                    (change)="getAnswer($event)"></mat-radio-button>
                 <label>D /{{item.answer4}}</label>
             </div>
         </div>
@@ -38,9 +42,11 @@
         <hr>
     </div>
     <div class="text-center" *ngIf="user?.role=='students'">
-        <span *ngIf="shwoResult" class="fs-4 text-success"> Votre Score Est : {{total}}/{{subject.questions.length}}
+        <span *ngIf="shwoResult || !validExam" class="fs-4 text-success"> Votre Score Est :
+            {{total}}/{{subject.questions.length}}
         </span>
-        <button *ngIf="!shwoResult" class="btn btn-success px-5 fs-5" (click)="getResult()"> Résultat</button>
+        <button *ngIf="!shwoResult && validExam" class="btn btn-success px-5 fs-5" (click)="getResult()">
+            Résultat</button>
     </div>
 
 </div>
