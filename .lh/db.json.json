@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 20,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1700141281522,
@@ -88,6 +88,14 @@
                 {
                     "date": 1700755752929,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,11 @@\n     }\n   ],\n   \"login\": [\n     {\n-      \"userName\": \"admin\",\n-      \"role\": \"doctor\",\n+      \"userName\": \"test\",\n+      \"role\": \"students\",\n+      \"userId\": 1,\n       \"id\": 1\n     }\n   ],\n   \"subjects\": [\n@@ -73,9 +74,8 @@\n     },\n     {\n       \"name\": \"Spring Boot\",\n       \"questions\": [\n-        \n         {\n           \"question\": \"? Qu'est-ce que Spring Boot \",\n           \"answer1\": \"Un framework de gestion de projet\",\n           \"answer2\": \"Une extension de Spring Framework\",\n@@ -137,16 +137,8 @@\n           \"answer4\": \"componentDidMount\",\n           \"correctAnswer\": \"componentDidMount\"\n         },\n         {\n-          \"question\": \"? Quelle méthode est utilisée pour mettre à jour l'état d'un composant React \",\n-          \"answer1\": \"this.setState()\",\n-          \"answer2\": \"this.updateState()\",\n-          \"answer3\": \"this.modifyState()\",\n-          \"answer4\": \"this.changeState()\",\n-          \"correctAnswer\": \"this.setState()\"\n-        },\n-        {\n           \"question\": \" ? Comment rend-on un composant React insensible aux modifications de l'état ou des propriétés \",\n           \"answer1\": \"shouldComponentUpdate\",\n           \"answer2\": \"componentWillUpdate\",\n           \"answer3\": \"static getDerivedStateFromProps\",\n"
+                },
+                {
+                    "date": 1701099536761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,54 @@\n       \"userName\": \"test\",\n       \"email\": \"test@test.com\",\n       \"password\": \"123\",\n       \"confirmPassWord\": \"123\",\n-      \"id\": 1\n+      \"id\": 1,\n+      \"subjects\": [\n+        {\n+          \"name\": \"React JS\",\n+          \"id\": \"3\",\n+          \"degree\": 2\n+        },\n+        {\n+          \"name\": \"Angular\",\n+          \"id\": \"1\",\n+          \"degree\": 5\n+        }\n+      ]\n+    },\n+    {\n+      \"userName\": \"gabsi wajdi\",\n+      \"email\": \"gabsi@gabsi.com\",\n+      \"password\": \"456\",\n+      \"confirmPassWord\": \"456\",\n+      \"id\": 2,\n+      \"subjects\": [\n+        {\n+          \"name\": \"React JS\",\n+          \"id\": \"3\",\n+          \"degree\": 2\n+        },\n+        {\n+          \"name\": \"Angular\",\n+          \"id\": \"1\",\n+          \"degree\": 5\n+        }\n+      ]\n+    },\n+    {\n+      \"userName\": \"ali\",\n+      \"email\": \"ali@ali.com\",\n+      \"password\": \"789\",\n+      \"confirmPassWord\": \"789\",\n+      \"id\": 3,\n+      \"subjects\": [\n+        {\n+          \"name\": \"Angular\",\n+          \"id\": \"1\",\n+          \"degree\": 5\n+        }\n+      ]\n     }\n   ],\n   \"doctor\": [\n     {\n@@ -18,10 +63,10 @@\n     }\n   ],\n   \"login\": [\n     {\n-      \"userName\": \"test\",\n-      \"role\": \"students\",\n+      \"userName\": \"admin\",\n+      \"role\": \"doctor\",\n       \"userId\": 1,\n       \"id\": 1\n     }\n   ],\n"
+                },
+                {
+                    "date": 1701100813556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,21 +4,10 @@\n       \"userName\": \"test\",\n       \"email\": \"test@test.com\",\n       \"password\": \"123\",\n       \"confirmPassWord\": \"123\",\n-      \"id\": 1,\n-      \"subjects\": [\n-        {\n-          \"name\": \"React JS\",\n-          \"id\": \"3\",\n-          \"degree\": 2\n-        },\n-        {\n-          \"name\": \"Angular\",\n-          \"id\": \"1\",\n-          \"degree\": 5\n-        }\n-      ]\n+      \"id\": 1\n+     \n     },\n     {\n       \"userName\": \"gabsi wajdi\",\n       \"email\": \"gabsi@gabsi.com\",\n"
                 }
             ],
             "date": 1700141281522,

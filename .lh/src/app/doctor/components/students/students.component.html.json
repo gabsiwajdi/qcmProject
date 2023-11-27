@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/app/doctor/components/students/students.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1701098404293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701098449623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n     <!-- Position Column -->\r\n     <ng-container matColumnDef=\"id\">\r\n       <th mat-header-cell *matHeaderCellDef> </th>\r\n-      <td mat-cell *matCellDef=\"\"> {{element.userId}} </td>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.userId}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Name Column -->\r\n     <ng-container matColumnDef=\"name\">\r\n"
+                },
+                {
+                    "date": 1701098485345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <!--- Note that these columns can be defined in any order.\r\n               The actual rendered columns are set as a property on the row definition\" -->\r\n \r\n     <!-- Position Column -->\r\n-    <ng-container matColumnDef=\"id\">\r\n+    <ng-container matColumnDef=\"userId\">\r\n       <th mat-header-cell *matHeaderCellDef> </th>\r\n       <td mat-cell *matCellDef=\"let element\"> {{element.userId}} </td>\r\n     </ng-container>\r\n \r\n"
+                },
+                {
+                    "date": 1701099297634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n     <!-- Weight Column -->\r\n     <ng-container matColumnDef=\"matiere\">\r\n       <th mat-header-cell *matHeaderCellDef> Matiére </th>\r\n-      <td mat-cell *matCellDef=\"let element\"> {{element.subject.name}} </td>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.subjects.name}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Symbol Column -->\r\n     <ng-container matColumnDef=\"resultat\">\r\n"
+                },
+                {
+                    "date": 1701099336636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+<div class=\"students\">\r\n+  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n+\r\n+    <!--- Note that these columns can be defined in any order.\r\n+              The actual rendered columns are set as a property on the row definition\" -->\r\n+\r\n+    <!-- Position Column -->\r\n+    <ng-container matColumnDef=\"userId\">\r\n+      <th mat-header-cell *matHeaderCellDef> </th>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.userId}} </td>\r\n+    </ng-container>\r\n+\r\n+    <!-- Name Column -->\r\n+    <ng-container matColumnDef=\"name\">\r\n+      <th mat-header-cell *matHeaderCellDef> Nom </th>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n+    </ng-container>\r\n+\r\n+    <!-- Weight Column -->\r\n+    <ng-container matColumnDef=\"matiere\">\r\n+      <th mat-header-cell *matHeaderCellDef> Matiére </th>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n+    </ng-container>\r\n+\r\n+    <!-- Symbol Column -->\r\n+    <ng-container matColumnDef=\"resultat\">\r\n+      <th mat-header-cell *matHeaderCellDef> Résultat </th>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.degree}} </td>\r\n+    </ng-container>\r\n+\r\n+    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n+    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n+  </table>\r\n+\r\n+\r\n+</div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701099373308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n     <!-- Position Column -->\r\n     <ng-container matColumnDef=\"userId\">\r\n       <th mat-header-cell *matHeaderCellDef> </th>\r\n-      <td mat-cell *matCellDef=\"let element\"> {{element.userId}} </td>\r\n+      <td mat-cell *matCellDef=\"let element \"> {{element.userId}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Name Column -->\r\n     <ng-container matColumnDef=\"name\">\r\n"
+                },
+                {
+                    "date": 1701099433479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n     <!-- Position Column -->\r\n     <ng-container matColumnDef=\"userId\">\r\n       <th mat-header-cell *matHeaderCellDef> </th>\r\n-      <td mat-cell *matCellDef=\"let element \"> {{element.userId}} </td>\r\n+      <td mat-cell *matCellDef=\"let element ;let index=index\"> {{element.userId}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Name Column -->\r\n     <ng-container matColumnDef=\"name\">\r\n"
+                },
+                {
+                    "date": 1701099457423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n     <!-- Position Column -->\r\n     <ng-container matColumnDef=\"userId\">\r\n       <th mat-header-cell *matHeaderCellDef> </th>\r\n-      <td mat-cell *matCellDef=\"let element ;let index=index\"> {{element.userId}} </td>\r\n+      <td mat-cell *matCellDef=\"let element ;let index=index\"> {{index +1}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Name Column -->\r\n     <ng-container matColumnDef=\"name\">\r\n"
+                },
+                {
+                    "date": 1701099572840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n     <!-- Weight Column -->\r\n     <ng-container matColumnDef=\"matiere\">\r\n       <th mat-header-cell *matHeaderCellDef> Matiére </th>\r\n-      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.subjects.name}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Symbol Column -->\r\n     <ng-container matColumnDef=\"resultat\">\r\n"
+                },
+                {
+                    "date": 1701099582670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n     <!-- Weight Column -->\r\n     <ng-container matColumnDef=\"matiere\">\r\n       <th mat-header-cell *matHeaderCellDef> Matiére </th>\r\n-      <td mat-cell *matCellDef=\"let element\"> {{element.subjects.name}} </td>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Symbol Column -->\r\n     <ng-container matColumnDef=\"resultat\">\r\n"
+                },
+                {
+                    "date": 1701100538765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <div class=\"students\">\r\n-  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n+  <table mat-table [dataSource]=\"dataTable\" class=\"mat-elevation-z8\">\r\n \r\n     <!--- Note that these columns can be defined in any order.\r\n               The actual rendered columns are set as a property on the row definition\" -->\r\n \r\n"
+                },
+                {
+                    "date": 1701100552944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n     <!-- Weight Column -->\r\n     <ng-container matColumnDef=\"matiere\">\r\n       <th mat-header-cell *matHeaderCellDef> Matiére </th>\r\n-      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n+      <td mat-cell *matCellDef=\"let element\"> {{element.subjects}} </td>\r\n     </ng-container>\r\n \r\n     <!-- Symbol Column -->\r\n     <ng-container matColumnDef=\"resultat\">\r\n"
+                }
+            ],
+            "date": 1701098404293,
+            "name": "Commit-0",
+            "content": "<div class=\"students\">\r\n  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n              The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n    <!-- Position Column -->\r\n    <ng-container matColumnDef=\"id\">\r\n      <th mat-header-cell *matHeaderCellDef> </th>\r\n      <td mat-cell *matCellDef=\"\"> {{element.userId}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Name Column -->\r\n    <ng-container matColumnDef=\"name\">\r\n      <th mat-header-cell *matHeaderCellDef> Nom </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Weight Column -->\r\n    <ng-container matColumnDef=\"matiere\">\r\n      <th mat-header-cell *matHeaderCellDef> Matiére </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.subject.name}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Symbol Column -->\r\n    <ng-container matColumnDef=\"resultat\">\r\n      <th mat-header-cell *matHeaderCellDef> Résultat </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.subject.degree}} </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  </table>\r\n\r\n\r\n</div>"
+        }
+    ]
+}

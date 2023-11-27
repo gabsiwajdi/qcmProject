@@ -5,7 +5,15 @@
       "email": "test@test.com",
       "password": "123",
       "confirmPassWord": "123",
-      "id": 1,
+      "id": 1
+     
+    },
+    {
+      "userName": "gabsi wajdi",
+      "email": "gabsi@gabsi.com",
+      "password": "456",
+      "confirmPassWord": "456",
+      "id": 2,
       "subjects": [
         {
           "name": "React JS",
@@ -20,18 +28,18 @@
       ]
     },
     {
-      "userName": "gabsi wajdi",
-      "email": "gabsi@gabsi.com",
-      "password": "456",
-      "confirmPassWord": "456",
-      "id": 2
-    },
-    {
       "userName": "ali",
       "email": "ali@ali.com",
       "password": "789",
       "confirmPassWord": "789",
-      "id": 3
+      "id": 3,
+      "subjects": [
+        {
+          "name": "Angular",
+          "id": "1",
+          "degree": 5
+        }
+      ]
     }
   ],
   "doctor": [

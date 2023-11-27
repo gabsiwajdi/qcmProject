@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app/doctor/components/students/students.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1701098295365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701098478615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   listStudents: any[] = [];\r\n   dataSource: any;\r\n   displayedColumns: any;\r\n   constructor(private service: AuthService) {\r\n-    this.displayedColumns = ['id', 'name', 'matiere', 'resultat'];\r\n+    this.displayedColumns = ['userId', 'name', 'matiere', 'resultat'];\r\n   }\r\n \r\n   ngOnInit(): void {\r\n     this.getAllStudenets();\r\n"
+                },
+                {
+                    "date": 1701098614447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,8 @@\n \r\n   getAllStudenets() {\r\n     this.service.getAllStudents('students').subscribe((res: any) => {\r\n       this.dataSource = res;\r\n-      console.log(this.listStudents);\r\n+      console.log(this.dataSource);\r\n     });\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1701098781448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   }\r\n \r\n   getAllStudenets() {\r\n     this.service.getAllStudents('students').subscribe((res: any) => {\r\n-      this.dataSource = res;\r\n+      this.dataSource = res.map();\r\n       console.log(this.dataSource);\r\n     });\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1701098803625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   }\r\n \r\n   getAllStudenets() {\r\n     this.service.getAllStudents('students').subscribe((res: any) => {\r\n-      this.dataSource = res.map();\r\n+      this.dataSource = res.map((student:any) =>);\r\n       console.log(this.dataSource);\r\n     });\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1701098816741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n   }\r\n \r\n   getAllStudenets() {\r\n     this.service.getAllStudents('students').subscribe((res: any) => {\r\n-      this.dataSource = res.map((student:any) =>);\r\n+      this.dataSource = res.map((student:any) =>{\r\n+        return \r\n+      });\r\n       console.log(this.dataSource);\r\n     });\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1701098890247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n   getAllStudenets() {\r\n     this.service.getAllStudents('students').subscribe((res: any) => {\r\n       this.dataSource = res.map((student: any) => {\r\n-        return;\r\n+        return student?.subject\r\n       });\r\n       console.log(this.dataSource);\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1701098899565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n   getAllStudenets() {\r\n     this.service.getAllStudents('students').subscribe((res: any) => {\r\n       this.dataSource = res.map((student: any) => {\r\n-        return student?.subject;\r\n+        return student?.subjects.map(());\r\n       });\r\n       console.log(this.dataSource);\r\n     });\r\n   }\r\n"
+                }
+            ],
+            "date": 1701098295365,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\r\nimport { AuthService } from 'src/app/auth/services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-students',\r\n  templateUrl: './students.component.html',\r\n  styleUrls: ['./students.component.scss'],\r\n})\r\nexport class StudentsComponent implements OnInit {\r\n  listStudents: any[] = [];\r\n  dataSource: any;\r\n  displayedColumns: any;\r\n  constructor(private service: AuthService) {\r\n    this.displayedColumns = ['id', 'name', 'matiere', 'resultat'];\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    this.getAllStudenets();\r\n  }\r\n\r\n  getAllStudenets() {\r\n    this.service.getAllStudents('students').subscribe((res: any) => {\r\n      this.dataSource = res;\r\n      console.log(this.listStudents);\r\n    });\r\n  }\r\n}\r\n"
+        }
+    ]
+}
